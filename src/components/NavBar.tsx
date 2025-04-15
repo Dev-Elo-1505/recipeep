@@ -1,12 +1,13 @@
 import { MdOutlineFastfood } from "react-icons/md";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="flex justify-between items-center">
         <div className="flex items-center gap-1">
             <MdOutlineFastfood className="text-3xl text-primary" />
-            <h1 className="text-2xl text-primary font-extralight">recipeep</h1>
+            <Link to={"/"} className="text-2xl text-primary font-extralight">recipeep</Link>
         </div>
       <SearchBar />
     </nav>

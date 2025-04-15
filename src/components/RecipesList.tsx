@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface RecipeProps {
   idMeal: string;
@@ -23,7 +24,11 @@ const RecipesList = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {recipes?.map((meal) => (
-        <div key={meal.idMeal} className="rounded-xl shadow-md p-4 bg-white">
+        <Link
+          to={`/recipe/${meal.idMeal}`}
+          key={meal.idMeal}
+          className="rounded-xl shadow-md p-4 bg-white"
+        >
           <img
             src={meal.strMealThumb}
             alt={meal.strMeal}
@@ -31,7 +36,7 @@ const RecipesList = () => {
           />
           <h2 className="font-bold mt-2">{meal.strMeal}</h2>
           <p className="text-sm text-gray-600">{meal.strCategory}</p>
-        </div>
+        </Link>
       ))}
     </div>
   );
