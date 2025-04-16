@@ -4,6 +4,7 @@
 @theme {
  --color-appBg: #fdf8f5;
  --color-primary: #FF6C37;
+ --color-search: #fffaf7;
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
 }
